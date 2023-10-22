@@ -1,0 +1,15 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    //code here  lettuce and cucumbers, lettuce and onions, onions and carrots, and onions and tomatoes.
+    if((plant1=='lettuce' && plant2=='cucumbers')){
+        return true;
+    } if((plant1=='lettuce' && plant2=='onions')){
+        return true;
+    }if((plant1=='onions' && plant2=='carrots')){
+        return true;
+    }if((plant1=='onions' && plant2=='tomatoes')){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
