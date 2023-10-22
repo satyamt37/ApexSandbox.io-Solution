@@ -1,4 +1,5 @@
 public String ageGroup(Integer n) {
+  integer age =n;
     if (age >= 0 && age <= 1) {
         return 'Infant';
     } else if (age >= 2 && age <= 14) {
