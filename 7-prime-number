@@ -1,16 +1,18 @@
 public Boolean isPrime(Integer num) {
     Boolean isPrime = false;
-     if (num <= 1) {
+
+    if (num <= 1) {
         isPrime = false;
-    }
-     if (num == 2) {
+    } else if (num == 2) {
         isPrime = true;
-    }
-    for(Integer i =2; i <num; i++){
-            if(Math.mod(num,i)==0){
-            isPrime = true;
-            break;
+    } else {
+        for (Integer i = 2; i <= Math.sqrt(num); i++) {
+            if (Math.mod(num, i) == 0) {
+                isPrime = false;
+                break;
             }
+        }
     }
-return isPrime;
+
+    return isPrime;
 }
