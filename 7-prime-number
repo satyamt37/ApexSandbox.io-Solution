@@ -1,18 +1,22 @@
 public Boolean isPrime(Integer num) {
-    Boolean isPrime = false;
-
     if (num <= 1) {
-        isPrime = false;
-    } else if (num == 2) {
-        isPrime = true;
-    } else {
-        for (Integer i = 2; i <= Math.sqrt(num); i++) {
-            if (Math.mod(num, i) == 0) {
-                isPrime = false;
-                break;
-            }
+        return false; // Numbers less than or equal to 1 are not prime
+    }
+
+    if (num <= 3) {
+        return true; // 2 and 3 are prime numbers
+    }
+
+    if (Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
+        return false; // Numbers divisible by 2 or 3 are not prime
+    }
+
+    // Check for divisibility by all integers of the form 6k ± 1, up to the square root of num
+    for (Integer i = 5; i * i <= num; i += 6) {
+        if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) {
+            return false; // Found a divisor, not a prime number
         }
     }
 
-    return isPrime;
+    return true; // If no divisors found, it's a prime number
 }
