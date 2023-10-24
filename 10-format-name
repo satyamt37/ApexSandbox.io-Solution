@@ -1,7 +1,7 @@
 public String formatName(String firstName, String lastName) {
-    if(lastName == ''){
+    if(String.IsBlank(lastName)){
         return firstName;
-    }else  if(firstName == ''){
+    }else  if(String.IsBlank(firstName)){
         return lastName;
     }else{
         return lastName+', '+firstName;
