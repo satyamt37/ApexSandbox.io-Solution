@@ -6,7 +6,7 @@ public Boolean isPrime(Integer num) {
      if (num == 2) {
         isPrime = true;
     }
-    for(Integer i =2; i <num/2; i++){
+    for(Integer i =2; i <num; i++){
             if(Math.mod(num,i)==0){
             isPrime = true;
             break;
