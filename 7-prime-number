@@ -6,5 +6,5 @@ public Boolean isPrime(Integer num) {
             break;
             }
     }
-
+return isPrime;
 }
